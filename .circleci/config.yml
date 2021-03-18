@@ -9,8 +9,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm ci
-            - run: npm verify
+            - run: npm install          
   test:
     executor:
       name: node/default
@@ -18,7 +17,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm test          
+            - run: npm verify        
 workflows:
     build-and-test:
       jobs:
