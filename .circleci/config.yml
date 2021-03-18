@@ -18,6 +18,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
+            - run: npm cypress install
             - run: npm test          
 workflows:
     build-and-test:
