@@ -10,7 +10,6 @@ Feature: Visit Money Gaming Web app and sign up
       Then I shloud see "loc02_registration_journey" is visible
       #user details
       Then I select "Mr" from dropdown at "loc2_title_dropdown"
-
       Then I entered "firstname" at "loc2_first_name"
       Then I entered "lastname" at "loc2_surname"
       Then I click on "loc02_accept_terms_checkbox"
