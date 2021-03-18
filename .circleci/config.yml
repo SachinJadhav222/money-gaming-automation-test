@@ -10,6 +10,14 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install          
+  verify:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm verify
   test:
     executor:
       name: node/default
@@ -17,11 +25,14 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm verify        
+            - run: echo test..        
 workflows:
-    build-and-test:
+    build-verify-test:
       jobs:
         - build
-        - test:
+        - verify:
            requires:
             - build
+        - test:
+           requires:
+            - verify
