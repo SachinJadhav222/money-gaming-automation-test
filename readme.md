@@ -19,6 +19,8 @@ Run cypress Test
 2. To run cypress test without dash board : #npm run cy:run
 3. Similary various scripts can be found on package.json file
 
+Cypress Dashboard Video of runing test  : https://dashboard.cypress.io/projects/bachhp/runs/1/test-results?actions=%5B%5D&browsers=%5B%5D&groups=%5B%5D&isFlaky=%5B%5D&modificationDateRange=%7B%22startDate%22%3A%221970-01-01%22%2C%22endDate%22%3A%222038-01-19%22%7D&orderBy=EXECUTION_ORDER&oses=%5B%5D&specs=%5B%5D&statuses=%5B%5D
+
 Feature file Location: "cypress\money-gaming-automation-test\cypress\integration\test\01.singUp.feature"
 
 Folder structure & Files
