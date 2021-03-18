@@ -1,0 +1,52 @@
+{
+  "name": "money-gaming-automation-test",
+  "version": "1.0.0",
+  "description": "Cypress cucumber BDD project for Money Gaming  ",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "cypress run",
+    "verify": "cypress verify",
+    "cy:chrome-test": "cypress run --spec cypress/integration/test/* .feature --browser chrome",
+    "cy:firefox-test": "cypress run --spec cypress/integration/test/*.feature --browser firefox",
+    "cy:record": "cypress run --record --key cdb6ccb4-9476-4871-a722-94f02f6ab086",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^4.1.0",
+    "cypress-cucumber-preprocessor": "^2.0.1",
+    "prettier": "^1.19.1",
+    "fs": "0.0.2",
+    "fs-extra": "5.0.0",
+    "glob": "7.1.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cucumber": "0.0.23",
+    "gulp-run": "1.7.1",
+    "gulp-sequence": "0.4.6",
+    "js-yaml": "3.10.0",
+    "xpath.js": "1.1.0",
+    "yaml-merge": "0.0.2",
+    "yargs": "11.0.0",
+    "deepmerge": "4.2.2",
+    "graceful-fs": "^4.2.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "devDependencies": {
+    "cypress-xpath": "^1.4.0",
+    "gulp": "^3.9.1"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "video": true,
+  "defaultCommandTimeout": 100000,
+  "pageLoadTimeout": 100000,
+  "testFiles": "**/*.feature",
+  "ignoreTestFiles": [
+    "*.js",
+    "*.md"
+  ],
+  "screenshotsFolder": "screenshots",
+  "projectId": "bachhp"
+}
