@@ -23,6 +23,7 @@ Cypress Dashboard Video of runing test  : https://dashboard.cypress.io/projects/
 
 Circle Ci Link: https://app.circleci.com/pipelines/github/SachinJadhav222/money-gaming-automation-test?invite=true
 
+
 SonarCloud: https://sonarcloud.io/project/configuration?id=SachinJadhav222_money-gaming-automation-test
 
 Feature file Location: "cypress\money-gaming-automation-test\cypress\integration\test\01.singUp.feature"
