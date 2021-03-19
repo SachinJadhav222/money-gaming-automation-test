@@ -23,7 +23,7 @@ Then('I should see {string} at {string}', (expectedValue, selector) => {
 		.and('contain', expectedValue)
 })
 
-Then('I shloud see {string} is visible', (selector) => {
+Then('I should see {string} is visible', (selector) => {
 	cy.getSelector(selector)
 		.should('be.visible')
 })
