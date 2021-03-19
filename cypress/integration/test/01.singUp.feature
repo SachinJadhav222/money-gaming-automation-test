@@ -7,7 +7,7 @@ Feature: Visit Money Gaming Web app and sign up
       Given I visit "moneyGamingWeb"
       Then I should see page title "Play Online Casino Games Now | MoneyGaming.com"
       Then I click on "loc01_join_now_button"
-      Then I shloud see "loc02_registration_journey" is visible
+      Then I should see "loc02_registration_journey" is visible
       #user details
       Then I select "Mr" from dropdown at "loc02_title_dropdown"
       Then I entered "John" at "loc02_first_name"
