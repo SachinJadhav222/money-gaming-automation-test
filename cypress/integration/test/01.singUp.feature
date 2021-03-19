@@ -1,9 +1,11 @@
+@signUp
 Feature: Visit Money Gaming Web app and sign up
 
    As a user
    I want to Sign up to app
-
-   Scenario: Login with valid credentials
+   
+   @error_message
+   Scenario: Required filed error message validation
       Given I visit "moneyGamingWeb"
       Then I should see page title "Play Online Casino Games Now | MoneyGaming.com"
       Then I click on "loc01_join_now_button"
@@ -16,6 +18,8 @@ Feature: Visit Money Gaming Web app and sign up
       Then I click on "loc02_join_now_button"
       #field error
       Then I should see "This field is required" at "loc02_required_filed_ERROR"
+   
+
       
      
 

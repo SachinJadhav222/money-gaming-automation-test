@@ -19,10 +19,16 @@ Run cypress Test
 2. To run cypress test without dash board : #npm run cy:run
 3. Similary various scripts can be found on package.json file
 
+
+This project has Cypress dashboard for test execution and monitoring and reporting
+
 Cypress Dashboard Video of runing test  : https://dashboard.cypress.io/projects/bachhp/runs/1/test-results?actions=%5B%5D&browsers=%5B%5D&groups=%5B%5D&isFlaky=%5B%5D&modificationDateRange=%7B%22startDate%22%3A%221970-01-01%22%2C%22endDate%22%3A%222038-01-19%22%7D&orderBy=EXECUTION_ORDER&oses=%5B%5D&specs=%5B%5D&statuses=%5B%5D
+
+This project is configured with Circle CI for CICD pipeline
 
 Circle Ci Link for build pipeline : https://app.circleci.com/pipelines/github/SachinJadhav222/money-gaming-automation-test?invite=true
 
+This project is configured with Sonar cube for code quality 
 
 SonarCloud link for code quality : https://sonarcloud.io/project/configuration?id=SachinJadhav222_money-gaming-automation-test
 
@@ -35,7 +41,11 @@ Folder structure & Files
    a. config : configuration and urls
    b. fixture: this is used for mock data
    c. integration: this folder has all the test cases, feature files
-   d. locator: all the web elemtsn are stored hre, thses are simple JS objects stored in key value pair
+   d. locator: all the web elemtsn are stored here, theses are simple JS objects stored in key value pair
+      file name start with prefix loc 
+      e.g. loc01.homePage.js
+           All the web elements in this, has name staring with loc01_ ,  loc01_join_now_button, we will be using this into the feature file. 
+           Lookign at name we can find out which file this locator is coming from 
    e. plugin: we can add plugin to index.js file e.g. cucmber plugin for BDD
    f: support: all step definitons and support files
    g: test-data : test data
