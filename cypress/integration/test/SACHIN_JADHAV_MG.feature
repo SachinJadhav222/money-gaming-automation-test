@@ -1,7 +1,7 @@
 # This feature is based on simple aproch 
 # We are sending input value and webelement itself through step defination
 # e.g.  Then I entered "firstname" at "loc2_first_name"
-#   In the above step we are entering "Fristname (this is input value)"  and  "loc2_first_name" is webelement  stored into saperate file.
+#   In the above step we are entering "John" (this is input value)  and  "loc2_first_name" is webelement  stored into saperate file.
 #   In step definition we read the input value, and we get the webelement form locator file and then perform action.
 #   With this approch coading and mentainance gets fairly easy.
 
@@ -18,14 +18,14 @@ Feature: Password validation feature
       Then I shloud see "loc02_registration_journey" is visible
       #user details
       Then I select "Mr" from dropdown at "loc2_title_dropdown"
-      Then I entered "firstname" at "loc2_first_name"
-      Then I entered "lastname" at "loc2_surname"
+      Then I entered "John" at "loc2_first_name"
+      Then I entered "Doe" at "loc2_surname"
       Then I entered "01-January-1981" at "loc2_dob"
       Then I entered "lastname@gmail.com" at "loc2_email"
       Then I entered "address1" at "loc2_address1"
       Then I entered "London" at "loc2_city"
 
-      # user details and passowrd 
+      # user details and password 
       Then I entered "user123" at "loc2_username"
       Then I entered "<invalid_password>" at "loc2_password1"
     
@@ -54,7 +54,7 @@ Feature: Password validation feature
       Then I entered "address1" at "loc2_address1"
       Then I entered "London" at "loc2_city"
 
-      # user details and passowrd 
+      # user details and password 
       Then I entered "user123" at "loc2_username"
       Then I entered "<first_password>" at "loc2_password1"
       Then I entered "<cofirm_password>" at "loc2_password2"
