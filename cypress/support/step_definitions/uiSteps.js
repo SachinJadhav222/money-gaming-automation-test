@@ -1,8 +1,12 @@
-import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
-const urls=require('../../config/urls');
+import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps'
+const urls=require('../../config/urls-endpoints/urls');
+const secretKey=require('../../config/secret-keys/secretKeys')
 
 Given('I visit {string}', URL => {
-	cy.visit(urls[URL])
+	
+    	cy.visit(urls[URL])
+	
+	
 })
 
 Then('I entered {string} at {string}', (expectedValue, selector) => {
@@ -38,4 +42,8 @@ Then('I scrolled to bottom',()=>{
 
 Then('I select {string} from dropdown at {string}',(expedtedValue,selector)=>{
    cy.getSelector(selector).select(expedtedValue);
+})
+
+And('My name is sachin',()=>{
+
 })

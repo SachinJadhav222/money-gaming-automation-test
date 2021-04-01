@@ -1,5 +1,10 @@
 {
+  "$schema": "https://on.cypress.io/cypress.schema.json",
+  "integrationFolder": "cypress/tests",
   "video": true,
+  "videosFolder": "cypress/videos",
+  "screenshotOnRunFailure": true,
+  "trashAssetsBeforeRuns": true,
   "defaultCommandTimeout": 100000,
   "pageLoadTimeout": 100000,
   "testFiles": "**/*.feature",
@@ -8,5 +13,15 @@
     "*.md"
   ],
   "screenshotsFolder": "screenshots",
-  "projectId": "bachhp"
+  "projectId": "bachhp",
+
+  "reporter": "mochawesome",
+  "reporterOptions":
+  {
+      "reportDir": "cypress/results",
+      "overwrite": false,
+      "html": true,
+      "json": true
+  }
+
 }
