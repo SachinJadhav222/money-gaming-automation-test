@@ -1,6 +1,6 @@
 import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps'
 const urls=require('../../config/urls-endpoints/urls');
-const secretKey=require('../../reports/secret-keys/secretKeys')
+const secretKey=require('../../config/secret-keys/secretKeys')
 
 Given('I visit {string}', URL => {
 	
