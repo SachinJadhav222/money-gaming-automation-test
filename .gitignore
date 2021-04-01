@@ -15,6 +15,6 @@ videos/
 npm-debug.log
 ci-configFiles
 cypress/config/secret-keys
-
+allure-report
 
 

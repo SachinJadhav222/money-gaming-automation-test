@@ -7,15 +7,8 @@
   "trashAssetsBeforeRuns": true,
   "defaultCommandTimeout": 100000,
   "pageLoadTimeout": 100000,
-  "testFiles": "**/*.js",
+  "testFiles": "**/*.js"
   
-  "reporter": "mochawesome",
-  "reporterOptions":
-  {
-      "reportDir": "cypress/results",
-      "overwrite": false,
-      "html": true,
-      "json": true
-  }
+  
 
 }
