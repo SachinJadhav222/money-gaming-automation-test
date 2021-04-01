@@ -11,8 +11,8 @@
     "cy:chrome-test": "cypress run --spec cypress/integration/test/* .feature --browser chrome",
     "cy:firefox-test": "cypress run --spec cypress/integration/test/*.feature --browser firefox",
     "cy:record": "cypress run --record --key cdb6ccb4-9476-4871-a722-94f02f6ab086",
-    "cy:api": "cypress open --config integrationFolder=cypress/tests/api",
-    "cy:ui": "cypress open --config integrationFolder=cypress/tests/ui",
+    "cy:api": "cypress open --config-file ./cypress-api.json",
+    "cy:ui": "cypress open --config-file ./cypress-ui.json",
     "cy:uireport": "cypress run --reporter mochawesome --config integrationFolder=cypress/tests/ui",
     "preinstall": "npx npm-force-resolutions"
   },

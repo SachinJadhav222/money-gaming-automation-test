@@ -12,6 +12,11 @@ export const newUser2 = {
 	userId: 109,
 }
 
+export const addNumbers=(num1,num2)=>{
+	console.log(`Addition of ${num1} and ${num2} is ${num1=nm2} `)
+     return num1+num2
+}
+
 export const MAX_Code=9992008989;
 
 

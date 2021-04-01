@@ -1,0 +1,21 @@
+{
+  "$schema": "https://on.cypress.io/cypress.schema.json",
+  "integrationFolder": "cypress/tests/api",
+  "video": false,
+  "videosFolder": "cypress/videos",
+  "screenshotOnRunFailure": false,
+  "trashAssetsBeforeRuns": true,
+  "defaultCommandTimeout": 100000,
+  "pageLoadTimeout": 100000,
+  "testFiles": "**/*.js",
+  
+  "reporter": "mochawesome",
+  "reporterOptions":
+  {
+      "reportDir": "cypress/results",
+      "overwrite": false,
+      "html": true,
+      "json": true
+  }
+
+}
