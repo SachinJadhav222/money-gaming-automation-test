@@ -15,7 +15,6 @@ videos/
 npm-debug.log
 ci-configFiles
 cypress\config\secret-keys\secret-keys.yml
-cypress\config\secret-keys
 
 
 
