@@ -1,28 +1,13 @@
 declare namespsce Cypress{
     interface Chainable<Subject =any>{
         /**
-         * Click DOM Element in the website application
+         * Get DOM Element in the website application
          * @example
-         * cy.login('email','password').click()  //Click button
+         * cy.getSelector(selector)
+         * This method can handle CSS and XPATH 
          */
-       login(email: string, password: string Chainable <Subject> )
-        /**
-        * Get Selector Custom command
-        * It will filter the selector based on xpath or not
-        * No need to pspecity special xapath comand , thsi can ahndle all get selector commands
-        */
-       getSelector(selector: string)
-       
-    };
+         getSelector(selector, string Chainable <subject>)
+      
+    }
     
-
-    // interface Chainable<Subject =any>{
-    //   /**
-    //     * Get Selector Custom command
-    //     * It will filter the selector based on xpath or not
-    //     * No need to pspecity special xapath comand , thsi can ahndle all get selector commands
-    //     */
-    //    getSelector(selector: string)
-    // };
-
 }

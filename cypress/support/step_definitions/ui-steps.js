@@ -1,3 +1,6 @@
+///<reference types="../../support"/>
+///<reference types="cypress"/>
+
 import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps'
 const urls=require('../../config/urls-endpoints/urls');
 const secretKey=require('../../config/secret-keys/secretKeys')
@@ -11,6 +14,7 @@ Given('I visit {string}', URL => {
 
 Then('I entered {string} at {string}', (expectedValue, selector) => {
 	cy.getSelector(selector).type(expectedValue)
+	
 })
 
 Then('I click on {string}', selector => {
