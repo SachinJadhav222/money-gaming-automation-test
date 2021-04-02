@@ -17,7 +17,7 @@
 ```
 3. Once installation is succesfull then we can run the test
 
-**Run cypress Test**
+**Run cypress Test for UI**
 
 1. To run cypress test in dastboard :
 ```shell script
@@ -29,6 +29,32 @@
  ```
 3. Similary various scripts can be found on package.json file
 
+**API Test Setup**
+1. Clone demo Rest API app: https://github.com/SachinJadhav222/demo-api-aa
+2. Run setup into this project root
+```shell script
+npm install
+```
+3. Install nodemon globally by opening terminal and running the following command :
+```shell script
+npm install nodemon -g
+```
+4. Start test
+```shell script
+npm start
+```
+5. By default this project runs on PORT 5002; to change it kindly open app.js file and update the following line of code: -
+     const PORT = process.env.PORT || 5002
+
+6. This projct has basic authentication in place. So, the hit the endpoints you have to provide the username and password.
+      username = admin
+      password = admin
+7. Check if application is running at:  http://localhost:5002/api/members
+
+8. Once app is up ,go back to original project 'Money-gaming-automation-test' and run
+```shell script
+npm run cy:api
+```
 
 This project has Cypress dashboard for test execution and monitoring and reporting
 
