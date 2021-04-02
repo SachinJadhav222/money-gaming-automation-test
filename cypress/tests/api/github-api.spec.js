@@ -3,12 +3,12 @@ const urls= require('../../config/urls-endpoints/urls')
 
 describe('Git Hub API Test',()=>{
     it('first test',()=>{
-        // cy.fixture('users.json').then((user)=>{
-        //     cy.log(user)
-        // })
-        cy.request(urls.github_endpoint).then(response =>{
-            cy.log(response)
-           // response.isOkStatusCode()
-        })
+        cy.api({
+            url: urls.github_endpoint,
+            method: 'GET',
+           
+                  } )
+        .its('status')
+        .should('eq',200)
     })
 })

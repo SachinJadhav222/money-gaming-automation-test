@@ -1,4 +1,5 @@
 ///// <reference types="@shelex/cypress-allure-plugin" />
+/// <reference types="cypress" />
 
 const cucumber = require('cypress-cucumber-preprocessor').default
 const allureWriter = require("@shelex/cypress-allure-plugin/writer");

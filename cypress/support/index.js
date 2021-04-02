@@ -22,3 +22,6 @@ require('cypress-xpath');
 
 //Allure report plugin
 import '@shelex/cypress-allure-plugin';
+
+//api disply/logging 
+import '@bahmutov/cy-api/support';

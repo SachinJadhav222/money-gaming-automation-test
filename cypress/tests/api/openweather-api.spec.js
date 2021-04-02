@@ -1,7 +1,12 @@
+const urls= require('../../config/urls-endpoints/urls')
 describe('Open Weather API Test',()=>{
-    it('first test',()=>{
-        cy.fixture('users.json').then((user)=>{
-            cy.log(user)
-        })
+    it('Open weather api',()=>{
+        cy.api({
+            url: urls.moneyGamingWeb,
+            method: 'GET',
+           
+                  } )
+        .its('status')
+        .should('eq',200)
     })
 })
