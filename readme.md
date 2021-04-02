@@ -11,13 +11,22 @@
 **Set up instructions**
 
 1. Clone the repo from https://github.com/SachinJadhav222/money-gaming-automation-test
-2. run #npm install at root folder
+2. run @ root folder
+```shell script
+   npm install 
+```
 3. Once installation is succesfull then we can run the test
 
 **Run cypress Test**
 
-1. To run cypress test in dastboard : #npm run cy:open
-2. To run cypress test without dash board : #npm run cy:run
+1. To run cypress test in dastboard :
+```shell script
+   npm run cy:open
+```
+2. To run cypress test without dash board :
+```shell script
+   npm run cy:run
+ ```
 3. Similary various scripts can be found on package.json file
 
 
@@ -34,7 +43,10 @@ This project is configured with Circle CI for CICD pipeline
 This project is configured with Sonar cube for code quality 
 : https://sonarcloud.io/project/configuration?id=SachinJadhav222_money-gaming-automation-test
 
-**Feature file Location :** "cypress\money-gaming-automation-test\cypress\integration\test\01.singUp.feature"
+**Feature file Location :** "cypress\money-gaming-automation-test\cypress\tests\ui\\*.features"
+
+**API Test Spec files:**
+"cypress\money-gaming-automation-test\cypress\tests\api\\*.spec.js"
 
 **Folder structure & Files**
 
@@ -42,7 +54,7 @@ This project is configured with Sonar cube for code quality
 2. cypress : this folder contains :
     - config : configuration and urls
     - fixture: this is used for mock data
-    - integration: this folder has all the test cases,  feature files
+    - tests: this folder has all the test cases,  feature files for UI  & spec    files for API tests
    - locator: all the web elemtsn are stored here, theses are simple JS objects stored in key value pair
       file name start with prefix loc 
       e.g. loc01.homePage.js
