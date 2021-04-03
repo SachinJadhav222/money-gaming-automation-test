@@ -18,8 +18,7 @@ Feature: Visit Money Gaming Web app and sign up
       Then I click on "loc02_join_now_button"
       #field error
       Then I should see "This field is required" at "loc02_required_filed_ERROR"
-      And My name is sachin
-
+     
 
 
 
