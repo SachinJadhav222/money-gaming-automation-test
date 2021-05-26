@@ -2,6 +2,7 @@
 
 const secretkey= require('../../config/secret-keys/secretKeys')
 const urls= require('../../config/urls-endpoints/urls')
+require('dotenv').config();
 let response1=null;
 
 describe('GET demo api',()=>{
