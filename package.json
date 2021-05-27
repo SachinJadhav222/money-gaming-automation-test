@@ -9,6 +9,8 @@
     "verify": "cypress verify",
     "cy:record": "cypress run --record --key cdb6ccb4-9476-4871-a722-94f02f6ab086",
     "cy:api": "cypress open --config-file ./cypress-api.json",
+    "api-test": "cypress open --config-file ./cypress-api-bdd.json",
+    "api-run": "cypress run --config-file ./cypress-api-bdd.json",
     "cy:ui": "cypress run --config-file ./cypress-ui.json"
   },
   "author": "Sachin Jadhav",
