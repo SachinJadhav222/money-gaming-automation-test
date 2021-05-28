@@ -1,35 +1,48 @@
-/// <reference types="@bahmutov/cy-api" />
+///// <reference types="@bahmutov/cy-api" />
 
+const { Then } = require("cypress-cucumber-preprocessor/steps");
 const getUrl = require("../../config/urls-endpoints/urls");
 
 const {
   setBaseUrl,
   makeApiCall,
   setHeader,
+  setMultipleHeaders,
+  setQueryParameters,
   verifyrResponseCode,
   verifyResponseProperty,
-  
+  verifyResponseBodyContaints,
+  validateResponseWithSchema
 } = require("./api-call");
 
 Given("I set base URL as {string}", function(url) {
-  setBaseUrl(url)
-  
+  setBaseUrl(url);
 });
 
 Then("I set header {string} as {string}", (headerName, headerValue) => {
   setHeader(headerName, headerValue);
-  
+});
+
+Then("I set multiple headers as:", (headersTable) => {
+  setMultipleHeaders(headersTable.hashes());
+});
+
+Then("I set query parameters as:", (queryTable) => {
+  setQueryParameters(queryTable.hashes());
 });
 
 Given("I GET {string}", function(resource) {
-  let method="GET"
-  makeApiCall(method,resource);
-  
+  let method = "GET";
+  makeApiCall(method, resource);
 });
 
 Then("Verify response status code is {int}", (statusCode) => {
   verifyrResponseCode(statusCode);
 });
+
+Then("Response body should be valid according to schema file {string}",(schemaFile)=>{
+  validateResponseWithSchema(schemaFile);
+})
 
 Then("Verify response details for Pokemon {string}", (expectedValue) => {
   //apicall.verifyResponseProperty(expectedValue)
@@ -49,10 +62,5 @@ Then("Verify response details for Pokemon {string}", (expectedValue) => {
 });
 
 Then("Verify response body should contain {string}", function(expectedValue) {
-  cy.get("@get_response_data").should((response) => {
-    //console.log(response);
-    //cy.contains(expectedValue)
-    // expect(response.body[0]).to.have.nested.property(title, expectedValue);
-    // expect(response.body.forms[0]).to.have.property("title", expectedValue);
-  });
+     verifyResponseBodyContaints(expectedValue)
 });

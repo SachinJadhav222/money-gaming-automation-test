@@ -9,6 +9,7 @@ Feature: Pokemon GET /pokemon/{pokemon_name or id}
         Given I GET "/pikachu"
         # Given As a user I want to execute Pokemon GET api for Pokemon "pikachu"
         Then Verify response status code is 200
+       # And Response body should be valid according to schema file "./cypress/fixtures/json-schema/poki-schema.json"
         And Verify response details for Pokemon "pikachu"
 
 

@@ -1,6 +1,7 @@
 {
   "$schema": "https://on.cypress.io/cypress.schema.json",
   "integrationFolder": "cypress/tests/api-bdd",
+  "baseUrl": "https://api.github.com",
   "pluginsFile": "cypress/plugins/index.js",
   "video": false,
   "videosFolder": "cypress/videos",
