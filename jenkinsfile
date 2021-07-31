@@ -1,12 +1,15 @@
 pipeline {
    agent any
+   environment{
+       NAME= 'SACHIN JADHAV'
+   }
 
     stages('Frist Stage') {
       stage('First Stage'){
        parallel{
             stage('Build') {
                      steps {
-                      echo 'Building..cypress test suite'
+                      echo 'Building..cypress test suite, My name is ${NAME}'
                  }
               }
            stage('Sonar') {
@@ -31,3 +34,4 @@ pipeline {
    
     
 }
+
