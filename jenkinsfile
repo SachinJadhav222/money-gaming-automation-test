@@ -5,14 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..cypress test suite'
-                sh 'node --version'
+                sh 'java --version'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..cypress test suite'
-                sh 'npm install'
-                sh 'npm run cy:run'
+               
             }
         }
         stage('Deploy') {
