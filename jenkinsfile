@@ -10,7 +10,7 @@ pipeline {
        parallel{
             stage('Build') {
                      steps {
-                      echo 'Building..cypress test suite, My DEMO $DEMO'
+                      echo "Building..cypress test suite, My DEMO $DEMO"
                  }
               }
            stage('Sonar') {
