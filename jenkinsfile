@@ -1,7 +1,27 @@
 pipeline {
    agent any
 
-    stages {
+    stages('Frist Stage') {
+        stage('Build') {
+            steps {
+                echo 'Building..cypress test suite'
+                
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..cypress test suite'
+               
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....the application after testing'
+            }
+        }
+    }
+    
+    stages('Second Stage') {
         stage('Build') {
             steps {
                 echo 'Building..cypress test suite'
