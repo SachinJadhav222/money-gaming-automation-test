@@ -2,20 +2,19 @@ pipeline {
    agent any
 
     stages('Frist Stage') {
+      stage('First Stage'){
        parallel{
-        stage('Build') {
-            steps {
-                echo 'Building..cypress test suite'
-                
-            }
-           }
-          stage('Sonar') {
+            stage('Build') {
+                     steps {
+                      echo 'Building..cypress test suite'
+                 }
+              }
+           stage('Sonar') {
             steps {
                 echo 'Sonar Job'
-                
-            }
+                }
            }
-        }
+        }}
         stage('Test') {
             steps {
                 echo 'Testing..cypress test suite'
